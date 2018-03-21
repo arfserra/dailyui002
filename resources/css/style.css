@@ -1,0 +1,59 @@
+/* Universal Styles */
+
+html {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+}
+
+/* Added this to make divs sizes relative to viewport */
+
+html, body {
+	height: 100%;
+}
+
+
+/* Desktop warning */
+#warning {
+	height: 100%;
+	background-color: #1F3B34;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#warning h1 {
+	font-weight: 400;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+/* Desktop warning display */
+
+@media only screen and (min-width: 360px) {
+	.desktop-only {
+		display:block !important;
+	}
+
+	.mobile-only {
+		display:none !important;
+	}
+
+}
+
+@media only screen and (max-width: 360px) {
+	.desktop-only {
+		display:none !important;
+	}
+
+	.mobile-only {
+		display:block !important;
+	}
+
+}
