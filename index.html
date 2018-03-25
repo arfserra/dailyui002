@@ -8,30 +8,38 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
-		<div id="warning" class="desktop-only">
+		<div class="desktop-only">
 			<h1>This example is mobile only. Please resize your browser to 360px and below.</h1>
 		</div>
-		<div id="wrapper" class="mobile-only">
-			<div id="product-image">
-				<img src="resources/images/necklace.jpg">
+		<div class="mobile-only">
+			<div class="product-image">
+				<img src="resources/images/necklace.jpg" alt="picture of a necklace">
 			</div>
-			<div id="product-info">
+			<div class="product-info">
 				<h1>Moonstone Necklace</h1>
 				<h2>$ 36.00</h2>
 			</div>
-			<div id="payment-details">
+			<div class="payment-details">
 					<p>We accept all credit cards.</p>
 					<form class="payment-form" action="" method="get">
-						<label for="cc-number">Card number</label>
-						<input id="cc-number" type="number">
-						<label for="cc-date">MM/YY</label>
-						<input id="cc-date" type="text">
-						<label for="postal-code">Postal code</label>
-						<input id="postal-code" type="text">
-						<label for="cvc">CVC</label>
-						<input id="cvc" type="number">
+						<div class=payment-form-input>
+							<label for="cc-number">Card number</label>
+							<input class="payment-form-input-field" id="cc-number" type="text">
+						</div>
+						<div class=payment-form-input>
+							<label for="cc-date">MM/YY</label>
+							<input class="payment-form-input-field" id="cc-date" type="text">
+						</div>
+						<div class=payment-form-input>
+							<label for="postal-code">Postal code</label>
+							<input class="payment-form-input-field" id="postal-code" type="text">
+						</div>
+						<div class=payment-form-input>
+							<label for="cvc">CVC</label>
+							<input class="payment-form-input-field" id="cvc" type="text">
+						</div>
 					</form>
 			</div>
-			<input type="button" value="Pay now">
+			<input class="main-cta" type="button" value="Pay now">
 		</div>
 	</body>

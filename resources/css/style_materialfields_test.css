@@ -70,7 +70,55 @@ img {
 
 /* Form */
 
+.payment-form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
+.payment-form-input:nth-child(1n) {
+	margin-left: 0.5rem;
+}
+
+.payment-form-input:nth-child(2n) {
+	margin-right: 0.5rem;
+}
+
+.payment-form-input   {
+    display: inline-block;
+    height: 60px;
+    padding-top: 25px;
+    position: relative;
+}
+
+.payment-form .payment-form-input-field   {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #1F3B34;
+    padding: 3px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.payment-form-input-field:focus {
+	outline: none;
+}
+
+.payment-form-input label {
+	color: #1F3B34;
+    left: 0;
+    position: absolute;
+    top: 29px;
+    transition: top .1s ease-in 0s;
+    z-index: 0;
+}
+
+.payment-form .payment-form-input: + label {
+    color: #3F51B5;
+    top: 12px;
+}
 
 
 /* Button */
