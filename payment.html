@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Moonstone Necklace - Goddess Jewelry</title>
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans:100,400" rel="stylesheet">
+		<link href="./resources/css/reset.css" rel="stylesheet">
+		<link href="./resources/css/style.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="desktop-only">
+			<h1>This example is mobile only. Please resize your browser to 360px and below.</h1>
+		</div>
+		<div class="mobile-only">
+			<div class="product-image-payment">
+				<img src="resources/images/necklace.jpg" alt="picture of a necklace">
+			</div>
+			<div class="product-info-payment">
+				<h1>Moonstone Necklace</h1>
+				<h2>$ 36.00</h2>
+			</div>
+			<div class="payment-details">
+					<p>We accept all credit cards.</p>
+					<form class="payment-form" action="" method="get">
+						<div class="payment-form-input">
+							<label for="cc-number">Card number</label>
+							<input class="payment-form-input-field" type="text" pattern="[0-9]*" id="cc-number" placeholder="0000 0000 0000 0000">
+							<span>
+						</div>
+						<div class="payment-form-input">
+							<label for="cc-date">MM/YY</label>
+							<input class="payment-form-input-field" id="cc-date" type="text" placeholder="00/00">
+						</div>
+						<div class="payment-form-input">
+							<label for="postal-code">Postal code</label>
+							<input class="payment-form-input-field" id="postal-code" type="text" placeholder="00000">
+						</div>
+						<div class="payment-form-input">
+							<label for="cvc">CVC</label>
+							<input class="payment-form-input-field" pattern="[0-9]*" id="cvc" type="text" placeholder="000">
+						</div>
+					</form>
+			</div>
+			<input class="main-cta" type="button" value="Place your order">
+		</div>
+	</body>

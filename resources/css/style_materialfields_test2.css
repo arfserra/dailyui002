@@ -49,12 +49,6 @@ html, body {
 	margin-top: -8rem;
 }
 
-.product-image-payment {
-	display: flex;
-	justify-content: center;
-	margin-top: -14rem;
-}
-
 img {
 	max-width: 90%;
 	align-self: center;
@@ -73,46 +67,33 @@ img {
 	margin-top: 1.5rem;
 }
 
-.product-info-payment {
-	margin-top: 2.5px;
-	text-align: center;
-}
-
-.product-info-payment h2 {
-	font-weight: 100;
-	font-size: 4rem;
-	margin-top: 1.5rem;
-}
-
-/* Payment Info */
-
-.payment-details {
-	margin-top: 98px;
-}
-
-.payment-details p {
-	margin-left: 0.5rem;
-}
-
 
 /* Form */
+
 .payment-form {
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .payment-form-input {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 1rem 0.5rem;
+    display: inline-block;
+    height: 2rem;
+    padding-top: 2rem;
 }
 
 input {
-	margin-top: 8px;
-	border: 0;
-	border-bottom: 2px solid #1F3B34;
+    background: none;
+    border: none;
+    box-sizing: border-box;
+    display: block;
+    font-size: 1rem;
+    padding: 0.25rem 0.1rem;
 	width: 100%;
+}
+
+input:invalid {
+    box-shadow: none;
 }
 
 input:focus {
@@ -120,16 +101,46 @@ input:focus {
 }
 
 label {
+	display: inline-block;
+	pointer-events: none;
+	position: relative;
+	width: 100%;
+}
+
+label::before {
+	content: attr(data-content);
+	position: relative;
+	transition: all 0.2s ease;
+	will-change: font-size, top;
+}
+
+label::after {
+	bottom: 0.9rem;
+	content: '';
+	height: 0.3rem;
+	left: 50%;
+	position: absolute;
+	transition: all 0.2s ease;
+	width: 0;
+	will-change: width, left;
+}
+
+label::before input:focus ~ label::before {
 	font-size: 0.75rem;
+	top: -3.25rem;
 }
 
-.payment-form-input:nth-child(odd) {
-	width: 60%;
+input:focus ~ label::after {
+	left: 0%;
+	width: 100%;
 }
 
-.payment-form-input:nth-child(even) {
-	width: 30%;
+input:invalid ~ label::before {
+	font-size: 1rem;
+	top: -2rem;
 }
+
+
 
 
 /* Button */
